@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title data-localize="title">GOVM</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <!-- Custom Font Icons CSS-->
+    <link rel="stylesheet" href="/css/landy-iconfont.css">
+    <!-- Google fonts - Open Sans-->
+    <link rel="stylesheet" href="/css/css.css?family=Open+Sans:300,400,700,800">
+    <!-- owl carousel-->
+    <link rel="stylesheet" href="/css/owl.carousel.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/logo.ico">
+    <!-- Tweaks for older IEs-->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+
+<body>
+    <!-- navbar-->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg fixed-top"><a href="/" class="navbar-brand" data-localize="govm">
+            <img src="img/logo.png" width="40">GOVM</a>
+        </nav>
+    </header>
+    <section id="roadmap" class="browser">
+        <div class="container">
+            <h2 data-localize="roadmap">RoadMap</h2>
+            <div id="myTab" role="tablist" class="nav nav-tabs">
+                <div class="row" id="roadmap_list">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="copyrights">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <p data-localize="company">&copy; 2019 · Shenzhen Yanfu Technology Co., Ltd.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <a href="http://www.beian.miit.gov.cn/" data-localize="record">Yue ICP B No. 19141788,China</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Javascript files-->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/popper.min.js"> </script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.cookie.js"> </script>
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/front.js"></script>
+    <script src="/js/jquery.localize.min.js"></script>
+    <script src="/js/load.js"></script>
+    <script>
+        $.get("history.json?v=2", function (data) {
+            var evs = data;
+            if (typeof evs !== "object"){
+                evs = JSON.parse(data);
+            }
+            var index = 1;
+            for (var i in evs.events) {
+                var item = evs.events[i];
+                if (item.time == "" || item.stat == "hide") {
+                    continue
+                }
+                var bgColor = "bg-warning";
+                var dateBgColor = "bg-info";
+                if (item.stat == "finish") {
+                    bgColor = "";
+                    // dateBgColor = "bg-info";
+                }
+                if (item.link === undefined) {
+                    item.link = "";
+                }
+                $("#roadmap_list").append(
+                    $("<div class='col-md-6'>").append(
+                        $('<a role="tab" class="nav-item nav-link ' + bgColor + '">').append(
+                            $('<span class="number">').append(index)
+                        ).append($('<p class="' + dateBgColor + '">').append(item.time)
+                        ).append($('<p data-localize="' + item.localize + '">').append(
+                            item.event))
+                    ).append($('<br>')));
+                index++;
+                // console.log(i, evs.events[i]);
+            }
+            var lang = getCookie("language");
+            if (lang != "") {
+                $("[data-localize]").localize("/i18n/govm", { language: lang })
+            } else {
+                $("[data-localize]").localize("/i18n/govm")
+            }
+        });
+    </script>
+</body>
+
+</html>

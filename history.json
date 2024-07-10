@@ -1,0 +1,29 @@
+{
+    "events":[
+        {"localize":"roadmap201708","stat":"finish","time":"August 2017","event":"start thinking about isomorphic multi chain system."},
+        {"localize":"roadmap201801","stat":"finish","time":"January 2018","event":"start theoretical and technical validation."},
+        {"localize":"roadmap20191001","stat":"finish","time":"October 1, 2019","event":"the main network officially goes online and starts mining."},
+        {"localize":"roadmap20191028","stat":"finish","time":"October 28, 2019","event":"technical white paper released."},
+        {"localize":"roadmap20191201","stat":"finish","time":"December 1, 2019","event":"create the second chain."},
+        {"localize":"roadmap20191208","stat":"finish","time":"December 8, 2019","event":"smart contract successfully deployed and ran."},
+        {"localize":"roadmap20200222","stat":"finish","time":"February 22, 2020","event":"Easy Wallet release."},
+        {"localize":"roadmap20200513","stat":"finish","time":"May 13, 2020","event":"Mobile wallet released"},
+        {"localize":"roadmap20200525","stat":"finish","time":"May 25 2020","event":"Achieve new consensus (DPOS + POW) and test"},
+        {"localize":"roadmap20200605","stat":"finish","time":"June 5, 2020","event":"Technical restart of the project."},
+        {"localize":"roadmap20200913","stat":"finish","time":"September 13, 2020","event":"Wrapped Token and list on Uniswap. Contract:0xac5d7dff150b19 5c97fca77001f8ad596eda1761"},
+        {"localize":"roadmap20200926","stat":"finish","time":"September 26, 2020","event":"Support deploying dAPP through easy wallet"},
+        {"localize":"roadmap14","stat":"finish","time":"","event":""},
+        {"localize":"roadmap","stat":"finish","time":"","event":""},
+        {"localize":"roadmap","stat":"finish","time":"","event":""},
+        {"localize":"roadmap","stat":"finish","time":"","event":""},
+        {"localize":"roadmap","stat":"finish","time":"","event":""},
+        {"localize":"roadmap","stat":"finish","time":"","event":""},
+        {"localize":"roadmap","stat":"finish","time":"","event":""},
+        {"localize":"roadmap","stat":"finish","time":"","event":""},
+        {"localize":"roadmap","stat":"finish","time":"","event":""},
+        {"localize":"roadmap","stat":"finish","time":"","event":""},
+        {"localize":"roadmap","stat":"finish","time":"","event":""},
+        {"localize":"roadmap","stat":"finish","time":"","event":""},
+        {"localize":"roadmap","stat":"finish","time":"","event":""}
+    ]
+}
