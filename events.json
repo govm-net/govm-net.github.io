@@ -1,24 +1,6 @@
 {
     "events": [
         {
-            "localize": "roadmap202105",
-            "stat": "finish",
-            "time": "May 2021",
-            "event": "Start project Phenix(GOVM based on Ethereum)"
-        },
-        {
-            "localize": "roadmap202108",
-            "stat": "plan",
-            "time": "July 2021",
-            "event": "Start the beta version of Phenix"
-        },
-        {
-            "localize": "roadmap202110",
-            "stat": "plan",
-            "time": "October 2021",
-            "event": "Start the mainnet of Phenix"
-        },
-        {
             "localize": "roadmap",
             "stat": "finish",
             "time": "",
